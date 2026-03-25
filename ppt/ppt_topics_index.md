@@ -1,0 +1,837 @@
+# CS231n PPT 内容索引
+
+说明：
+- 按每个 PDF 单独整理。
+- 以“知识点索引”的粒度列出，不机械重复同一概念的连续铺垫页。
+- 尽量保留到单页知识点级别；概念名优先用课件里的英文术语。
+
+## lecture_1_part_1.pdf
+
+- introduction
+- welcome to CS231n
+- artificial intelligence
+- machine learning
+- deep learning
+- computer vision
+- visual recognition
+- image representation
+- edge detection
+- feature points
+- Hubel & Wiesel
+- Roberts
+- David Marr
+- generalized cylinders
+- Canny
+- AI winter
+- neural correlates of recognition
+- object recognition
+- scene recognition
+- PASCAL
+- Caltech101
+- SIFT
+- Viola-Jones
+- normalized cuts
+- perceptron
+- neocognitron
+- backpropagation
+- LeNet
+- ImageNet
+- AlexNet
+- deep learning is everywhere
+- image classification
+- image retrieval
+- image captioning
+- text-to-image
+- modern vision applications
+- open problems in computer vision
+
+## lecture_1_part_2.pdf
+
+- lecture overview
+- instructors
+- guest lecturers
+- course roadmap
+- deep learning basics
+- image classification
+- linear classifiers
+- softmax
+- neural networks
+- optimizers
+- CNNs
+- RNNs
+- attention
+- transformers
+- perceiving and understanding the visual world
+- object detection
+- segmentation
+- self-supervised learning
+- generative models
+- image generation
+- 3D vision
+- robotics and embodied AI
+- human-centered AI
+- Nobel Prize in Physics 2024
+- course website
+- grading
+- assignments
+- course project
+- discussion sections
+- Google Colab
+- textbook resources
+- staff contact
+
+## lecture_2.pdf
+
+- image classification with linear classifiers
+- assignment 1
+- course project
+- discussion section
+- syllabus
+- image classification task
+- recognition challenges
+- illumination
+- viewpoint
+- background clutter
+- deformation
+- occlusion
+- context
+- data-driven approach
+- train / val / test split
+- nearest neighbor
+- distance metric
+- k-nearest neighbors
+- hyperparameters
+- setting hyperparameters
+- cross-validation intuition
+- parametric approach
+- linear classifier
+- score function
+- weight matrix
+- template matching view
+- visual view of weights
+- bias trick
+- loss function
+- multiclass SVM
+- hinge loss
+- softmax classifier
+- multinomial logistic regression
+- softmax function
+- probability normalization
+- maximum likelihood
+- softmax loss
+- SVM loss
+- softmax vs SVM
+
+## lecture_3.pdf
+
+- regularization and optimization
+- assignment 1 logistics
+- project proposal
+- office hours
+- recap from last week
+- full loss
+- data loss
+- regularization
+- regularization strength
+- prefer simpler models
+- generalization
+- training vs test performance
+- optimization objective
+- random initialization
+- score evaluation
+- gradient
+- numerical gradient
+- analytic gradient intuition
+- gradient descent
+- learning rate
+- stochastic gradient descent
+- minibatch
+- SGD problems
+- steep directions
+- shallow directions
+- saddle point
+- momentum
+- Nesterov momentum
+- AdaGrad
+- RMSProp
+- Adam
+- AdamW
+- learning rate decay
+- step decay
+- cosine decay
+- linear warmup
+- second-order optimization
+- Taylor expansion
+- Hessian
+- Newton method
+- feature transform
+- nonlinearity motivation
+- softmax vs SVM revisit
+
+## lecture_4.pdf
+
+- neural networks and backpropagation
+- project proposal
+- discussion section
+- recap
+- learning rate scheduling
+- modern generative AI examples
+- DALL-E 3
+- GPT-4
+- Sora
+- more compute
+- nonlinearity
+- activation function
+- two-layer neural network
+- hidden layer
+- output layer
+- network capacity
+- number of layers
+- hidden size
+- sigmoid
+- tanh
+- ReLU
+- training a 2-layer network
+- gradient computation
+- computational graph
+- backpropagation
+- chain rule
+- local gradient
+- upstream gradient
+- downstream gradient
+- scalar backprop
+- gradient flow patterns
+- add gate
+- multiply gate
+- max gate
+- sigmoid gradient
+- modular forward / backward API
+- flat implementation
+- vector-valued backprop
+- Jacobian
+- matrix-valued backprop
+- tensor-valued backprop
+- ReLU backward
+- matrix multiply backward
+
+## lecture_5.pdf
+
+- image classification with CNNs
+- assignment 1
+- project proposal
+- course roadmap
+- CNN motivation
+- convnets dominate vision
+- transformers take over vision
+- convolutional networks overview
+- fully connected layer
+- convolution layer
+- activation function
+- pooling layer
+- filter / kernel
+- sliding window
+- feature map
+- output volume
+- convolution over channels
+- stacking conv layers
+- spatial dimensions
+- filter size
+- stride
+- padding
+- receptive field
+- convolution example
+- parameter counting
+- PyTorch convolution layer
+- translation equivariance
+- conv hyperparameters
+- architecture trends
+- smaller filters
+- deeper networks
+- fewer FC / POOL layers
+- deep learning overview recap
+- historical context
+
+## lecture_6.pdf
+
+- training CNNs and CNN architectures
+- course logistics
+- lecture overview
+- how to train CNNs
+- how to build CNNs
+- data preprocessing
+- normalization layers
+- layer norm
+- regularization
+- dropout
+- activation functions
+- ReLU
+- activation function zoo
+- CNN architectures
+- VGGNet
+- small filters
+- deeper networks
+- effective receptive field
+- ResNet
+- degradation problem
+- residual mapping
+- residual block
+- identity shortcut
+- stem layer
+- weight initialization
+- too small initialization
+- too large initialization
+- Xavier initialization
+- Kaiming / MSRA initialization
+- regularization pattern
+- cutout
+- random crop
+- data augmentation
+- transfer learning
+- fixed feature extractor
+- finetuning
+- dataset similarity
+- hyperparameter selection
+- training curves
+- train longer
+
+## lecture_7.pdf
+
+- recurrent neural networks
+- course logistics
+- clarifications from last time
+- dropout recap
+- normalization vs initialization
+- recurrent neural network
+- internal state
+- recurrence formula
+- shared parameters across time
+- vanilla RNN
+- repeated-1s toy example
+- RNN computational graph
+- many-to-one
+- many-to-many
+- backpropagation through time
+- character-level language model
+- vocabulary
+- sampling
+- hidden state evolution
+- train more phenomenon
+- interpretable cells
+- image captioning
+- caption generation
+- captioning examples
+- multilayer RNNs
+- gradient flow
+- vanishing gradients
+- long-term dependencies
+- LSTM
+- cell state
+- hidden state
+- input gate
+- forget gate
+- output gate
+- candidate gate
+- LSTM gradient flow
+
+## lecture_8.pdf
+
+- attention and transformers
+- assignment 2
+- project proposal deadline
+- RNN recap
+- attention overview
+- transformer overview
+- sequence to sequence
+- encoder-decoder
+- context vector
+- sequence to sequence with RNNs
+- Bahdanau attention
+- alignment scores
+- attention weights
+- attention visualization
+- attention layer
+- query
+- key
+- value
+- scaled dot-product attention
+- multiple queries
+- separate key/value projections
+- self-attention
+- permutation equivariance
+- masked self-attention
+- causal masking
+- multi-head self-attention
+- output projection
+- self-attention as four matrix multiplies
+- memory complexity
+- RNN vs convolution vs self-attention
+- transformer block
+- residual connection
+- layer normalization
+- MLP
+- transformer scaling
+- Vision Transformer
+- image patches
+- patch embedding
+- positional embedding
+- tweaking transformers
+- pre-norm
+- RMSNorm
+- SwiGLU
+- Mixture of Experts
+
+## lecture_9.pdf
+
+- detection
+- segmentation
+- visualization
+- understanding
+- transformers recap
+- Vision Transformer recap
+- tweaking transformers
+- computer vision tasks overview
+- semantic segmentation
+- sliding window segmentation
+- convolutional segmentation
+- in-network upsampling
+- unpooling
+- nearest neighbor upsampling
+- bed of nails
+- learnable upsampling
+- transposed convolution
+- U-Net
+- pixel-wise labeling
+- object detection
+- localization
+- bounding box regression
+- multitask loss
+- single-object detection
+- multiple-object detection
+- R-CNN
+- region proposals
+- RoI Pool
+- Fast R-CNN
+- R-CNN vs Fast R-CNN
+- Region Proposal Network
+- Faster R-CNN
+- anchor boxes
+- YOLO
+- DETR
+- instance segmentation
+- Mask R-CNN
+- mask targets
+- RoI Align
+- saliency maps
+- backprop saliency
+- CAM
+- Grad-CAM
+- guided backprop
+- intermediate feature visualization
+
+## lecture_10.pdf
+
+- video understanding
+- video = 2D + time
+- video classification
+- short clips
+- raw video size
+- low fps / low resolution training
+- single frame baseline
+- early fusion
+- late fusion
+- 3D CNN
+- temporal receptive field
+- early fusion vs late fusion vs 3D CNN
+- C3D
+- 2D conv vs 3D conv
+- temporal shift invariance
+- optical flow
+- two-stream networks
+- measuring motion
+- long-term temporal structure
+- CNN + recurrent network
+- LSTM for video
+- many-to-many video modeling
+- spatio-temporal self-attention
+- nonlocal block
+- I3D
+- inflating 2D networks to 3D
+- visualizing video models
+- action recognition interpretability
+- audiovisual perception
+- McGurk effect
+- visual voice
+- audio-visual source separation
+- efficient video understanding
+
+## lecture_11.pdf
+
+- large-scale distributed training
+- GPU hardware
+- NVIDIA H100
+- compute cores
+- HBM memory
+- bandwidth
+- L2 cache
+- streaming multiprocessor
+- tensor cores
+- FLOPs
+- mixed precision
+- GPU speed scaling
+- multi-GPU training
+- data parallelism
+- distributed data parallel
+- all-reduce
+- fully sharded data parallelism
+- ZeRO
+- model sharding
+- activation checkpointing
+- compute vs memory tradeoff
+- HFU
+- MFU
+- throughput
+- communication bottlenecks
+- pipeline parallelism
+- microbatches
+- tensor parallelism
+- tensor parallel MLP
+- tensor parallel attention
+- context parallelism
+- long-sequence training
+- Ulysses
+
+## lecture_12.pdf
+
+- self-supervised learning
+- administrative
+- previous lecture recap
+- computer vision tasks
+- representation learning
+- pretext task
+- self-supervised evaluation
+- semi-supervised transfer
+- linear classifier evaluation
+- visual attention analysis
+- rotation prediction
+- relative patch prediction
+- jigsaw puzzle
+- inpainting
+- reconstruction
+- inpainting evaluation
+- image coloring
+- split-brain autoencoder
+- video coloring
+- tracking from colorization
+- Masked Autoencoders
+- masking method
+- MAE encoder
+- MAE decoder
+- reconstruction objective
+- linear probing
+- full fine-tuning
+- contrastive representation learning
+- contrastive learning formulation
+- InfoNCE
+- positive samples
+- negative samples
+- SimCLR
+- data augmentation
+- mini-batch contrastive learning
+- projection head
+- large batch size
+- MoCo
+- MoCo v2
+- instance contrastive learning
+- sequence contrastive learning
+- CPC
+- audio sequence modeling
+- visual context prediction
+- DINO
+- DINO v2
+- Dense Object Net
+
+## lecture_13.pdf
+
+- generative models part 1
+- administrative
+- self-supervised recap
+- DINO recap
+- supervised learning
+- unsupervised learning
+- dimensionality reduction
+- clustering
+- density estimation
+- generative vs discriminative models
+- p(y|x)
+- p(x)
+- p(x|y)
+- applications of generative models
+- feature learning
+- outlier detection
+- conditional generation
+- taxonomy of generative models
+- explicit density
+- implicit density
+- tractable density
+- approximate density
+- direct sampling
+- indirect sampling
+- maximum likelihood estimation
+- likelihood of training data
+- autoregressive models
+- chain rule of probability
+- sequence modeling
+- autoregressive image generation
+- autoencoders
+- reconstruction
+- latent code
+- variational autoencoders
+- prior p(z)
+- posterior q(z|x)
+- encoder
+- decoder
+- marginal likelihood
+- ELBO
+- KL divergence
+- reparameterization trick
+- reconstruction loss
+- prior loss
+- VAE training
+- generative models recap
+
+## lecture_14.pdf
+
+- generative models part 2
+- administrative
+- generative models recap
+- autoregressive recap
+- VAE recap
+- GAN
+- generator
+- discriminator
+- latent variable z
+- generator distribution
+- minimax game
+- GAN training objective
+- non-saturating generator loss
+- alternating updates
+- DCGAN
+- GAN summary
+- GAN pros and cons
+- diffusion models
+- denoising intuition
+- rectified flow
+- rectified flow training
+- rectified flow sampling
+- conditional rectified flow
+- classifier-free guidance
+- guidance strength
+- optimal prediction
+- noise schedules
+- latent diffusion models
+- VAE latents
+- encoder-decoder latents
+- diffusion transformer
+- timestep conditioning
+- cross-attention conditioning
+- joint attention
+- text-to-video
+- video diffusion
+- generalized diffusion
+- progressive distillation
+- autoregressive models strike back
+- discrete latents
+
+## lecture_15.pdf
+
+- 3D vision
+- geometry representations
+- explicit representations
+- implicit representations
+- representation considerations
+- point clouds
+- surfels
+- noisy scans
+- registration
+- polygon meshes
+- mesh upsampling
+- mesh simplification
+- mesh regularization
+- parametric representation
+- parametric curves
+- parametric surfaces
+- Bezier curves
+- Bezier surfaces
+- subdivision surfaces
+- explicit surface sampling
+- inside / outside test
+- algebraic surfaces
+- constructive solid geometry
+- distance functions
+- signed distance functions
+- voxels
+- ShapeNet
+- Princeton Shape Benchmark
+- Objaverse
+- CO3D
+- indoor 3D scenes
+- AI + geometry datasets
+- AI + geometry tasks
+- generative models for shape
+- discriminative models for shape
+- multi-view CNN
+- voxel networks
+- 3D-GAN
+- Visual Object Networks
+- octree
+- OctNet / O-CNN
+- PointNet
+- permutation invariance
+- sampling invariance
+- symmetric functions
+- mesh / graph convolution
+- point cloud distance metrics
+- AtlasNet
+- deep implicit functions
+- DeepSDF
+- deep level sets
+- NeRF
+- volume rendering
+- implicit geometry + rendering
+- 3D Gaussian Splatting
+- structure-aware representation
+- segmented geometry
+- part sets
+- relationship graphs
+- hierarchies
+- hierarchical graph of shape primitives
+- programs
+
+## lecture_16.pdf
+
+- multi-modal foundation models
+- specialized models vs foundation models
+- pretraining
+- fine-tuning
+- zero-shot
+- few-shot
+- classes of foundation models
+- language models
+- vision-language models
+- self-supervised recap
+- SimCLR recap
+- CLIP
+- CLIP training objective
+- image encoder
+- text encoder
+- similarity score
+- zero-shot classification with text prompts
+- prompt ensembling
+- classifier foundation models
+- scaling CLIP
+- transformer backbone
+- CLIP limitations
+- batch size dependence
+- compositionality
+- caption supervision limits
+- data quality
+- intentional data collection
+- LLaVA
+- autoregressive multimodal modeling
+- CLIP feature choices
+- CLS / pooling token issue
+- Flamingo
+- gated cross-attention
+- few-shot multimodal learning
+- zero-shot and few-shot results
+- open weights
+- open data
+- open code
+- open evals
+- PixMo
+- data curation
+- perception to action
+- Molmo
+- SAM
+- promptable segmentation
+- mask selection
+- zero-shot classification for unseen concepts
+- prompt engineering
+- VisProg
+- visual programming
+
+## lecture_17.pdf
+
+- robot learning
+- supervised learning recap
+- self-supervised learning recap
+- reinforcement learning
+- state
+- action
+- reward
+- environment
+- cart-pole
+- text generation as sequential decision making
+- cloth folding robot
+- sensors for robotics
+- multimodal sensing
+- perception-action loop
+- case study: Atari
+- Q-learning
+- model-free RL
+- AlphaGo
+- AlphaGo Zero
+- AlphaZero
+- MuZero
+- RL vs supervised learning
+- model-free RL problems
+- sample inefficiency
+- model learning
+- model-based planning
+- world model
+- state transition function
+- particle dynamics
+- future prediction
+- learning from demonstrations
+- imitation learning
+- behavior cloning
+- implicit behavior cloning
+- robotic foundation models
+- observation-goal to action policy
+- Pi-Zero
+- cross-embodiment dataset
+- evaluation of robot learning models
+- simulation evaluation
+- sim-to-real gap
+- procedural scene generation
+- practical considerations of foundation models
+- system-level robotics issues
+
+## section_3.pdf
+
+- final project overview
+- agenda
+- project expectations
+- applications track
+- models track
+- group size
+- project scope
+- final report structure
+- abstract
+- related work
+- methods
+- data description
+- experiments and results
+- conclusion
+- project quality criteria
+- project idea selection
+- sources of inspiration
+- reading papers efficiently
+- proposal
+- milestone
+- final report
+- due dates
+- support
+- FAQ
+- project changes
+- compute credits
